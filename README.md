@@ -1,22 +1,23 @@
 # 💳 Credit Risk Classification Analysis
-
+---
 [![Python](https://img.shields.io/badge/Python-3.13.3-blue.svg)](https://www.python.org/downloads/release/python-3133/)
 
 # 📌 1.0 Overview
-
+---
 This project focuses on building a predictive model to assess credit risk. The goal is to use borrower data to classify whether a loan applicant is likely to default or repay their loan. This helps financial institutions reduce losses and make informed lending decisions.
 
 # 🔍 2.0 Business and Data Understanding
+---
 
 ### 🎯 Stakeholders
----
+
 - **Loan officers**, **risk analysts**, and **credit managers** who need tools to assess risk more accurately.
 - **Regulatory teams** who require transparent and interpretable credit models.
 - **Data science teams** responsible for model development and monitoring.
 
----
+
 ### 🗂️ Dataset Description
----
+
 - Historical loan records with borrower demographics, financial status, and loan outcomes from kaggle: https://www.kaggle.com/datasets/udaymalviya/bank-loan-data/data
 - Key features include: 
      - previous_loan_defaults_on_file
@@ -26,7 +27,7 @@ This project focuses on building a predictive model to assess credit risk. The g
      - person_home_ownership
      - loan_status(target)
 
----
+
 
 ## 📌 Project Goals
 
@@ -36,7 +37,7 @@ The primary objective is to develop a **predictive model** to:
 - Prioritize **recall** to minimize missed defaulters (false negatives)
 - Provide **interpretable outputs** for regulatory and policy alignment
 
----
+
 
 ## 📂 Project Structure
 
@@ -48,7 +49,7 @@ The primary objective is to develop a **predictive model** to:
 - `index.ipynb`: Main analysis notebook
 - `README.md`: Project documentation 
 
----
+
 ## 🧪 Methods Used
 
 - **Exploratory Data Analysis (EDA)**
@@ -60,6 +61,7 @@ The primary objective is to develop a **predictive model** to:
   
 
 # 🤖 3.0 Modeling
+---
 
 - **Models used:**
      - **Logistic Regression**
@@ -78,6 +80,7 @@ The primary objective is to develop a **predictive model** to:
 
 
 # 📈 4.0 Evaluation
+---
 
 Models were evaluated using:
 - **Precision**, **Recall**, **F1-Score**
@@ -113,13 +116,14 @@ Models were evaluated using:
 
 
 # ✅ 5.0 Conclusion
+---
 
 - **Default history**,**interest Rate**, **loan-to-income ratio**, and **persons income** were strong predictors of default.
 - **Decision Tree (HPT)** achieved the best overall performance.
 - **Logistic Regression with SMOTE** achieved the highest recall and is recommended if minimizing missed defaulters is the priority.
 - The model can be used to segment borrowers into risk groups for tailored credit strategies.
 
----
+
 
 ## 💻 How to Run This Project
 
