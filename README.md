@@ -2,9 +2,29 @@
 
 [![Python](https://img.shields.io/badge/Python-3.13.3-blue.svg)](https://www.python.org/downloads/release/python-3133/)
 
-## 🔍 Business Understanding
+# 📌 1.0 Overview
 
-A classification project to assess and predict the **credit risk of loan applicants** using **Logistic Regression** and **Decision Trees**. This analysis aims to identify high-risk borrowers and assist lending institutions in making more data-informed, risk-sensitive credit decisions.
+This project focuses on building a predictive model to assess credit risk. The goal is to use borrower data to classify whether a loan applicant is likely to default or repay their loan. This helps financial institutions reduce losses and make informed lending decisions.
+
+# 🔍 2.0 Business and Data Understanding
+
+### 🎯 Stakeholders
+---
+- **Loan officers**, **risk analysts**, and **credit managers** who need tools to assess risk more accurately.
+- **Regulatory teams** who require transparent and interpretable credit models.
+- **Data science teams** responsible for model development and monitoring.
+
+---
+### 🗂️ Dataset Description
+---
+- Historical loan records with borrower demographics, financial status, and loan outcomes from kaggle: https://www.kaggle.com/datasets/udaymalviya/bank-loan-data/data
+- Key features include: 
+     - previous_loan_defaults_on_file
+     - loan_int_rate
+     - loan_percent_income 
+     - pesron_income
+     - person_home_ownership
+     - loan_status(target)
 
 ---
 
@@ -28,37 +48,42 @@ The primary objective is to develop a **predictive model** to:
 - `index.ipynb`: Main analysis notebook
 - `README.md`: Project documentation 
 
-
+---
 ## 🧪 Methods Used
 
 - **Exploratory Data Analysis (EDA)**
   - Distribution analysis of default rates by demographic and loan attributes
-  - Boxplots, countplots, correlation heatmap
+  - Boxplots, countplots, correlation heatmap, pairplot
 
 - **Data Preprocessing**
   - One-hot encoding (with `category_encoders`)
-  - Scaling (MinMaxScaler)
-  - Class imbalance handled using **SMOTE**
+  
 
-- **Modeling**
-  - Logistic Regression (with and without SMOTE)
-  - Decision Tree Classifier
-  - Hyperparameter tuning via `GridSearchCV`
+# 🤖 3.0 Modeling
+
+- **Models used:**
+     - **Logistic Regression**
+     - **Decision Tree**
+
+- **Techniques applied:**
+     - **SMOTE** for handling class imbalance
+     - **Hyperparameter Tuning** via GridSearchCV
+     - **Train-test split** for validation
+     - **MinMaxScaler** for normalization
 
 - **Evaluation Metrics**
-  - Precision, Recall, F1-score, Accuracy
-  - **AUC-ROC Curve**
-  - Confusion Matrix
+     - Precision, Recall, F1-score, Accuracy
+     - **AUC-ROC Curve**
+     - Confusion Matrix
 
----
 
-## 📊 Key Visualizations
+# 📈 4.0 Evaluation
 
-| Visualization                       | Sample |
-|------------------------------------|--------|
-| 📈 ROC Curve (Model Comparison)     | ![ROC](images/roc_curve.png) |
-| 📊 Confusion Matrix (DT + SMOTE)    | ![Confusion Matrix](images/conf_matrix_dt_hpt.png) |
-| 📌 Feature Importance (Decision Tree) | ![Feature Importance](images/feature_importance.png) |
+Models were evaluated using:
+- **Precision**, **Recall**, **F1-Score**
+- **Accuracy**
+- **AUC (Area Under ROC Curve)**
+- **Confusion Matrix** and **ROC Curve** visualizations
 
 ---
 
@@ -74,6 +99,25 @@ The primary objective is to develop a **predictive model** to:
 | AUC        | 90.77% |
 
 > Chosen due to its high accuracy and **balanced recall**, while maintaining **interpretability** for credit decision-making.
+
+---
+
+## 📊 Key Visualizations
+
+| Visualization                       | Sample |
+|------------------------------------|--------|
+| 📈 ROC Curve (Model Comparison)     | ![ROC](images/roc_curve.png) |
+| 📊 Confusion Matrix (DT + SMOTE)    | ![Confusion Matrix](images/conf_matrix_dt_hpt.png) |
+| 📌 Feature Importance (Decision Tree) | ![Feature Importance](images/feature_importance.png) |
+
+
+
+# ✅ 5.0 Conclusion
+
+- **Default history**,**interest Rate**, **loan-to-income ratio**, and **persons income** were strong predictors of default.
+- **Decision Tree (HPT)** achieved the best overall performance.
+- **Logistic Regression with SMOTE** achieved the highest recall and is recommended if minimizing missed defaulters is the priority.
+- The model can be used to segment borrowers into risk groups for tailored credit strategies.
 
 ---
 
