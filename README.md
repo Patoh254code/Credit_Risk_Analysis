@@ -1,13 +1,13 @@
 # 💳 Credit Risk Classification Analysis
----
+
 [![Python](https://img.shields.io/badge/Python-3.13.3-blue.svg)](https://www.python.org/downloads/release/python-3133/)
 
 # 📌 1.0 Overview
----
+
 This project focuses on building a predictive model to assess credit risk. The goal is to use borrower data to classify whether a loan applicant is likely to default or repay their loan. This helps financial institutions reduce losses and make informed lending decisions.
 
 # 🔍 2.0 Business and Data Understanding
----
+
 
 ### 🎯 Stakeholders
 
@@ -61,7 +61,7 @@ The primary objective is to develop a **predictive model** to:
   
 
 # 🤖 3.0 Modeling
----
+
 
 - **Models used:**
      - **Logistic Regression**
@@ -80,7 +80,7 @@ The primary objective is to develop a **predictive model** to:
 
 
 # 📈 4.0 Evaluation
----
+
 
 Models were evaluated using:
 - **Precision**, **Recall**, **F1-Score**
@@ -88,7 +88,7 @@ Models were evaluated using:
 - **AUC (Area Under ROC Curve)**
 - **Confusion Matrix** and **ROC Curve** visualizations
 
----
+
 
 ## ✅ Final Recommendation
 
@@ -103,7 +103,7 @@ Models were evaluated using:
 
 > Chosen due to its high accuracy and **balanced recall**, while maintaining **interpretability** for credit decision-making.
 
----
+
 
 ## 📊 Key Visualizations
 
@@ -116,7 +116,7 @@ Models were evaluated using:
 
 
 # ✅ 5.0 Conclusion
----
+
 
 - **Default history**,**interest Rate**, **loan-to-income ratio**, and **persons income** were strong predictors of default.
 - **Decision Tree (HPT)** achieved the best overall performance.
