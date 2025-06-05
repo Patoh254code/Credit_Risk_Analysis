@@ -131,7 +131,7 @@ Models were evaluated using:
 | Visualization                       | Sample |
 |------------------------------------|--------|
 | 📈 ROC Curve (Model Comparison)     | ![ROC](images/roc_curve.png) |
-| 📊 Confusion Matrix (DT + SMOTE)    | ![Confusion Matrix](images/conf_matrix_dt_hpt.png) |
+| 📊 Confusion Matrix (DT + SMOTE)    | ![Confusion Matrix](images/conf_matrix_xg_sm.png) |
 | 📌 Feature Importance (Decision Tree) | ![Feature Importance](images/feature_importance.png) |
 
 
