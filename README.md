@@ -132,7 +132,7 @@ Models were evaluated using:
 |------------------------------------|--------|
 | 📈 ROC Curve (Model Comparison)     | ![ROC](images/roc_curve.png) |
 | 📊 Confusion Matrix (XGB + SMOTE)    | ![Confusion Matrix](images/conf_matrix_xg_sm.png) |
-| 📌 Feature Importance (Decision Tree) | ![Feature Importance](images/feature_importance.png) |
+| 📌 Feature Importance (XGBoost + SMOTE) | ![Feature Importance](images/feature_importance.png) |
 
 
 
