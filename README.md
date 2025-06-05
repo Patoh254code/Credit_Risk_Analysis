@@ -20,16 +20,36 @@ This project focuses on building a predictive model to assess credit risk. The g
 
 - Historical loan records with borrower demographics, financial status, and loan outcomes from kaggle: https://www.kaggle.com/datasets/udaymalviya/bank-loan-data/data
 - Key features include: 
-     - previous_loan_defaults_on_file
-     - loan_int_rate
-     - loan_percent_income 
-     - pesron_income
-     - person_home_ownership
-     - loan_status(target)
+    1. **Demographics**
+
+       - `person_age`: Age of the applicant (in years).
+       - `person_gender`: Gender of the applicant (male, female).
+       - `person_education`: Educational background (High School, Bachelor, Master, etc.).
+
+    2. **Financial**
+
+       - `person_income`: Annual income of the applicant (in USD).
+       - `person_emp_exp`: Years of employment experience.
+       - `person_home_ownership`: Type of home ownership (RENT, OWN, MORTGAGE).
+
+    3. **Loan Details**
+
+       - `loan_amnt`: Loan amount requested (in USD).
+       - `loan_intent`: Purpose of the loan (PERSONAL, EDUCATION, MEDICAL, etc.).
+       - `loan_int_rate`: Interest rate on the loan (percentage).
+       - `loan_percent_income`: Ratio of loan amount to income.
+
+    4. **Credit History**
+       - `cb_person_cred_hist_length`: Length of the applicant's credit history (in years).
+       - `credit_score`: Credit score of the applicant.
+       - `previous_loan_defaults_on_file`: Whether the applicant has previous loan defaults (Yes or No).
+
+     5. **Target Variable**
+        - `loan_status`: 0 if the loan was repaid successfully, 1 if the applicant defaulted.
 
 
 
-## 📌 Project Goals
+### 📌 Project Goals
 
 The primary objective is to develop a **predictive model** to:
 - Identify **key drivers of loan default**
@@ -39,7 +59,7 @@ The primary objective is to develop a **predictive model** to:
 
 
 
-## 📂 Project Structure
+### 📂 Project Structure
 
 - `data`: Raw or sample dataset
 - `notebook.pdf`: Summary of Jupyter Notebooks for EDA  and modeling
@@ -50,7 +70,7 @@ The primary objective is to develop a **predictive model** to:
 - `README.md`: Project documentation 
 
 
-## 🧪 Methods Used
+### 🧪 Methods Used
 
 - **Exploratory Data Analysis (EDA)**
   - Distribution analysis of default rates by demographic and loan attributes
@@ -66,6 +86,7 @@ The primary objective is to develop a **predictive model** to:
 - **Models used:**
      - **Logistic Regression**
      - **Decision Tree**
+     - **XGBoost Classifier**
 
 - **Techniques applied:**
      - **SMOTE** for handling class imbalance
@@ -92,20 +113,20 @@ Models were evaluated using:
 
 ## ✅ Final Recommendation
 
-### 💡 Recommended Model: **Decision Tree with Hyperparameter Tuning**
+### 💡 Recommended Model: **XGBoost with SMOTE for balancing**
 
 | Metric     | Score |
 |------------|-------|
-| Accuracy   | 90.85% |
-| Recall     | 75.44% |
-| F1-Score   | 78.51% |
-| AUC        | 90.77% |
+| Accuracy   | 92.43% |
+| Recall     | 82.78% |
+| F1-Score   | 82.90% |
+| AUC        | 97.57% |
 
-> Chosen due to its high accuracy and **balanced recall**, while maintaining **interpretability** for credit decision-making.
+> Chosen due to its **high recall**,high AUC and high accuracy, while maintaining **balanced operational usability** for overall credit decision-making.
 
 
 
-## 📊 Key Visualizations
+### 📊 Key Visualizations
 
 | Visualization                       | Sample |
 |------------------------------------|--------|
@@ -118,31 +139,21 @@ Models were evaluated using:
 # ✅ 5.0 Conclusion
 
 
-- **Default history**,**interest Rate**, **loan-to-income ratio**, and **persons income** were strong predictors of default.
-- **Decision Tree (HPT)** achieved the best overall performance.
-- **Logistic Regression with SMOTE** achieved the highest recall and is recommended if minimizing missed defaulters is the priority.
+- **Default history**,**interest Rate**, **loan-to-income ratio**, and **persons income** were key predictors of default.
+- **XGBoost + SMOTE** achieved the best overall performance.
 - The model can be used to segment borrowers into risk groups for tailored credit strategies.
 
 
 
-## 💻 How to Run This Project
+# 💻 How to Run This Project
 
 1. **Clone the repo**
 2. **Create a virtual environment (optional)**
 3. **Install dependencies**
 4. **Launch the notebook**
 
-## 📦 **Requirements**
-- pandas
-- numpy
-- matplotlib
-- seaborn
-- scikit-learn
-- imbalanced-learn
-- category_encoders
-
 ## 📌 Future Work
-- Add XGBoost and Random Forest for deeper comparison
+- Add more classification models for deeper comparison
 - Deploy best model
 
 ## 👤 **Author**
